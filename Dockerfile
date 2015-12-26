@@ -6,12 +6,11 @@ FROM debian:jessie
 MAINTAINER Damon Massey <ke5kul@amarillowireless.net>
 
 RUN mkdir -p /var/log/onetime /var/run/onetime /var/lib/onetime \
- && useradd -G sudo -d /var/lib/onetime ots \
+ && useradd -d /var/lib/onetime ots \
  && chown ots /var/log/onetime /var/run/onetime /var/lib/onetime
 
 RUN apt-get update \
- && apt-get install -y build-essential git ntp libyaml-dev libevent-dev zlib1g zlib1g-dev openssl libssl-dev libxml2 libreadline-dev \
- && apt-get install -y redis-server ruby1.9.1 bundler \
+ && apt-get install -y git redis-server ruby1.9.1 bundler \
  && rm -rf /var/lib/apt/lists/* \
  && apt-get clean
 
