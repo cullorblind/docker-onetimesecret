@@ -1,6 +1,6 @@
 :site:
-  :host: ots.prwn.net:7143
-  :domain: ots.prwn.net
+  :host: localhost:7143
+  :domain: localhost
   :ssl: false
   # NOTE Once the secret is set, do not change it (keep a backup offsite)
   :secret: CHANGEME
